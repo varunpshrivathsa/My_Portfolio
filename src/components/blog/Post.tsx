@@ -47,7 +47,8 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
           <Row gap="24" vertical="center">
             <Row vertical="center" gap="16">
               {/* ✅ Fixed-size avatar so it never blows up */}
-              <Avatar src={person.avatar} alt={person.name} size="s" />
+              {/* <Avatar src={person.avatar} alt={person.name} size="s" /> */}
+              <Avatar src={person.avatar} size="s" />
               <Text variant="label-default-s">{person.name}</Text>
             </Row>
             <Text variant="body-default-xs" onBackground="neutral-weak">
