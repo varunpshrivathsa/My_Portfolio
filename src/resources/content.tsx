@@ -1,185 +1,166 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import {
+  About,
+  Blog,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+  Research,
+  Resume,
+  Contact,
+} from "@/types";
+
+/**
+ * IMPORTANT:
+ * - Files under /public are available at the site root.
+ * - Keep avatar as a RELATIVE public path (e.g., "/images/avatar.jpg").
+ * - Do NOT use absolute URLs (http://localhost:3000/...) for images passed to UI components.
+ */
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Varun",
+  lastName: "Phanindra",
+  name: "Varun Phanindra",
+  role: "ML Engineer | Software Development",
+  avatar: "/images/avatar.jpg", // must exist at /public/images/avatar.jpg
+  email: "vphan@ic.edu",
+  location: "America/Chicago",
+  languages: [],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/varunpshrivathsa?tab=repositories",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/varun-p-shrivathsa/",
   },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
+  { name: "Email", icon: "email", link: `mailto:${person.email}` },
+  { name: "LeetCode", icon: "", link: "https://leetcode.com/u/varunpshrivathsa/" },
 ];
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/home.jpg", // served from /public/images/og/home.jpg
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
-  subline: (
-    <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+  headline: <>I build intelligent software from data to deployment</>,
+  subline: <>I’m Varun, an engineer integrating machine learning with modern software architecture from
+  designing data pipelines, model training and scalable inference systems for real-world deployment.</>,
 };
 
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
+  title: "About Me",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
+  tableOfContent: { display: true, subItems: false },
+  avatar: { display: true },
+  calendar: { display: true, link: "https://cal.com" },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am a MSCS Thesis student at University of Illinois-Chicago specializing in Machine
+        Learning, Deep Learning, and Robotics. Experienced in building end-to-end ML pipelines, My
+        Research includes robotic exploration with hands-on work on AgileX LIMO and SCOUT Robots.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "G19 Studio",
+        timeframe: "May 2025 - Aug 2025",
+        role: "ML Student Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built 'TwinVerse', a human digital twin using real-time Apple Watch data with PyTorch,
+            PPO-RL and XGBoost for stress &amp; fall detection.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Deployed with multi-modal signal processing and personalized recovery recommendations as
+            Dockerized FastAPI microservices with Redis caching, improving response latency by 40%.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Mekhalyn",
+        timeframe: "Jan 2024 - Apr 2024",
+        role: "Software Developer Intern",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed a recruiter analytics platform with Flask, React, and PostgreSQL, deployed via
+            Kubernetes and CI/CD.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Fine-tuned GPT-3.5 using LoRA for resume insights, and ran XGBoost GPU inference on 5M+
+            records, reducing screening time by 38%.
           </>,
+          <>
+            Implemented role-based authentication and RESTful APIs with unit tests, improving
+            platform security.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "National Institute of Advanced Studies, IISc",
+        timeframe: "Jun 2023 - Jun 2024",
+        role: "Research Intern",
+        achievements: [
+          <>
+            Led a GIS pipeline for STRR Phase-1 impact analysis using Cartosat, Landsat and
+            ALOS-PALSAR to categorize 200m sqm with 92% accuracy.
+          </>,
+          <>
+            Trained 2D CNNs on multispectral bands for automated land-cover segmentation, improving
+            built-up detection.
+          </>,
+          <>Obtained Karnataka State Council for Science and Technology (KSCST) research funding.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of Illinois - Chicago",
+        description: <>Master of Science in Computer Science (Thesis)</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Dayananda Sagar University",
+        description: <>Bachelor of Technology - Computer Science and Engineering</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
         title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
+        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        tags: [{ name: "Figma", icon: "figma" }],
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
@@ -197,24 +178,12 @@ const about: About = {
       },
       {
         title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "Supabase", icon: "supabase" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
@@ -223,7 +192,7 @@ const about: About = {
             height: 9,
           },
         ],
-      },  
+      },
     ],
   },
 };
@@ -233,68 +202,111 @@ const blog: Blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
+  label: "Projects",
+  title: "My Projects",
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+const research: Research = {
+  path: "/research",
+  label: "Research & Publications",
+  title: "Research & Publications",
+  description: `Publications, preprints, and talks by ${person.name}`,
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const resume: Resume = {
+  path: "/resume",
+  label: "Resume",
+  title: "Resume",
+  description: `Resume of ${person.name}`,
+};
+
+const contact: Contact = {
+  path: "/contact",
+  label: "Contact",
+  title: "Contact",
+  description: `Get in touch with ${person.name}`,
+};
+
+/**
+ * Blog cards use thumbnails under /public/blogs/.
+ * Example: /public/blogs/blog1.jpg → "/blogs/blog1.jpg"
+ */
+const posts = [
+  {
+    slug: "kmeans-image-compression",
+    metadata: {
+      title: "Understanding K-Means Clustering: Simple Image Compression",
+      image: "/blogs/blog1.jpg",
+      publishedAt: "2024-12-26",
+      tag: "Machine Learning",
+      externalUrl:
+        "https://medium.com/@varunpshrivathsa/understanding-k-means-clustering-simple-image-compression-90437350e3c455",
+    },
+  },
+  {
+    slug: "linear-regression-practical-approach",
+    metadata: {
+      title: "How Linear Regression Really Works? A Practical Approach",
+      image: "/blogs/blog2.jpg",
+      publishedAt: "2024-12-26",
+      tag: "Machine Learning",
+      externalUrl:
+        "https://medium.com/@varunpshrivathsa/how-linear-regression-really-works-a-practical-approach-f337595d7883",
+    },
+  },
+  {
+    slug: "knn-mnist-classification",
+    metadata: {
+      title: "KNN Classification: MNIST Digit Recognition",
+      image: "/blogs/blog3.jpg",
+      publishedAt: "2025-02-12",
+      tag: "Machine Learning",
+      externalUrl:
+        "https://medium.com/@varunpshrivathsa/knn-classification-mnist-digit-recognition-c4adf6855f19",
+    },
+  },
+  {
+    slug: "hierarchical-clustering-image-segmentation",
+    metadata: {
+      title: "Agglomerative Hierarchical Clustering in Image Segmentation",
+      image: "/blogs/blog4.jpg",
+      publishedAt: "2025-05-05",
+      tag: "Machine Learning",
+      externalUrl:
+        "https://medium.com/@varunpshrivathsa/agglomerative-hierarchical-clustering-in-image-segmentation-c682153eb967",
+    },
+  },
+  {
+    slug: "pinecone-semantic-search-movies",
+    metadata: {
+      title: "Pinecone in Action: Semantic Search for Movie Recommendation.",
+      image: "/blogs/blog5.jpg",
+      publishedAt: "2025-05-12",
+      tag: "Generative AI",
+      externalUrl:
+        "https://medium.com/@varunpshrivathsa/pinecone-in-action-semantic-search-for-movie-recommendation-1d597514e3ce",
+    },
+  },
+];
+
+const blogPosts = posts;
+
+export {
+  person,
+  social,
+  newsletter,
+  home,
+  about,
+  blog,
+  work,
+  research,
+  resume,
+  contact,
+  posts,
+  blogPosts,
+};

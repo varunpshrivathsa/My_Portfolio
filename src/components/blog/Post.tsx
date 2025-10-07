@@ -1,21 +1,25 @@
 "use client";
 
-import { Card, Column, Media, Row, Avatar, Text } from "@once-ui-system/core";
+import { Card, Column, Media, Row, Text, Avatar } from "@once-ui-system/core";
 import { formatDate } from "@/utils/formatDate";
 import { person } from "@/resources";
 
 interface PostProps {
-  post: any;
+  post: any; // { slug?, metadata: { title, image, publishedAt, tag?, externalUrl? } }
   thumbnail: boolean;
   direction?: "row" | "column";
 }
 
 export default function Post({ post, thumbnail, direction }: PostProps) {
+  const isExternal = !!post?.metadata?.externalUrl;
+  const href = isExternal ? post.metadata.externalUrl : `/blog/${post.slug}`;
+
   return (
     <Card
       fillWidth
-      key={post.slug}
-      href={`/blog/${post.slug}`}
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       transition="micro-medium"
       direction={direction}
       border="transparent"
@@ -25,32 +29,36 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
       gap={direction === "column" ? undefined : "24"}
       s={{ direction: "column" }}
     >
-      {post.metadata.image && thumbnail && (
+      {post.metadata?.image && thumbnail && (
         <Media
           priority
           sizes="(max-width: 768px) 100vw, 640px"
           border="neutral-alpha-weak"
           cursor="interactive"
           radius="l"
-          src={post.metadata.image}
+          src={post.metadata.image} // e.g. "/blogs/blog1.jpg"
           alt={"Thumbnail of " + post.metadata.title}
           aspectRatio="16 / 9"
         />
       )}
+
       <Row fillWidth>
         <Column maxWidth={28} paddingY="24" paddingX="l" gap="20" vertical="center">
           <Row gap="24" vertical="center">
             <Row vertical="center" gap="16">
-              <Avatar src={person.avatar} size="s" />
+              {/* ✅ Fixed-size avatar so it never blows up */}
+              <Avatar src={person.avatar} alt={person.name} size="s" />
               <Text variant="label-default-s">{person.name}</Text>
             </Row>
             <Text variant="body-default-xs" onBackground="neutral-weak">
               {formatDate(post.metadata.publishedAt, false)}
             </Text>
           </Row>
+
           <Text variant="heading-strong-l" wrap="balance">
             {post.metadata.title}
           </Text>
+
           {post.metadata.tag && (
             <Text variant="label-strong-s" onBackground="neutral-weak">
               {post.metadata.tag}

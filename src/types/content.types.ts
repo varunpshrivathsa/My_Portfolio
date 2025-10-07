@@ -236,3 +236,19 @@ export interface Gallery extends BasePageConfig {
     orientation: string;
   }>;
 }
+// Add at the bottom of this file
+export type BlogItem = {
+  // keep slug optional so old internal posts still work
+  slug?: string;
+
+  title: string;
+  subtitle?: string;
+  date: string;               // e.g. '2025-10-06'
+  image: string;              // '/images/blog/cover.jpg'
+  tags?: string[];
+  author?: { name: string; avatar?: string };
+  excerpt?: string;
+
+  // NEW: when present, card opens this Medium link in a new tab
+  externalUrl?: string;
+};

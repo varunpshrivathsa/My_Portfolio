@@ -1,41 +1,37 @@
-import { getPosts } from "@/utils/utils";
 import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
+import { projects as allProjects } from "@/resources/projects";
 
 interface ProjectsProps {
-  range?: [number, number?];
-  exclude?: string[];
+  range?: [number, number?]; // still supported if you want to show a subset
 }
 
-export function Projects({ range, exclude }: ProjectsProps) {
-  let allProjects = getPosts(["src", "app", "work", "projects"]);
+export function Projects({ range }: ProjectsProps) {
+  // Order first by explicit `order`, then by `publishedAt` (newest first)
+  const sorted = [...allProjects].sort((a, b) => {
+    const orderA = a.order ?? 9999;
+    const orderB = b.order ?? 9999;
+    if (orderA !== orderB) return orderA - orderB;
 
-  // Exclude by slug (exact match)
-  if (exclude && exclude.length > 0) {
-    allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
-  }
-
-  const sortedProjects = allProjects.sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+    const tA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+    const tB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+    return tB - tA;
   });
 
-  const displayedProjects = range
-    ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
-    : sortedProjects;
+  const displayed = range ? sorted.slice(range[0] - 1, range[1] ?? sorted.length) : sorted;
 
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
-      {displayedProjects.map((post, index) => (
+      {displayed.map((p, index) => (
         <ProjectCard
+          key={p.title}
           priority={index < 2}
-          key={post.slug}
-          href={`/work/${post.slug}`}
-          images={post.metadata.images}
-          title={post.metadata.title}
-          description={post.metadata.summary}
-          content={post.content}
-          avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
-          link={post.metadata.link || ""}
+          image={p.image}
+          title={p.title}
+          description={p.description}
+          tools={p.tools}
+          github={p.github}
+          demo={p.demo}
         />
       ))}
     </Column>

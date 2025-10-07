@@ -1,26 +1,10 @@
-// import a pre-defined template for config and content options
-export {
-  person,
-  social,
-  newsletter,
-  home,
-  about,
-  blog,
-  work,
-  gallery,
-} from "./content";
+// src/resources/index.ts
 
-export {
-  display,
-  mailchimp,
-  routes,
-  protectedRoutes,
-  baseURL,
-  fonts,
-  style,
-  schema,
-  sameAs,
-  socialSharing,
-  effects,
-  dataStyle,
-} from "./once-ui.config";
+// Re-export your site/content data
+export * from "./content";
+
+// Re-export config (this already includes `baseURL` and other config exports)
+export * from "./once-ui.config";
+
+// (Optional) if other parts of the app import icons from "@/resources"
+export * from "./icons";
