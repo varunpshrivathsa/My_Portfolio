@@ -6,8 +6,6 @@ import {
   Person,
   Social,
   Work,
-  Resume,
-  Contact,
 } from "@/types";
 /**
  * IMPORTANT:
@@ -48,7 +46,7 @@ const social: Social = [
   { name: "LeetCode", icon: "", link: "https://leetcode.com/u/varunpshrivathsa/" },
 ];
 
-const home: Home = {
+const home={
   path: "/",
   image: "/images/og/home.jpg", // served from /public/images/og/home.jpg
   label: "Home",
@@ -209,21 +207,21 @@ const work: Work = {
   description: `Design and dev projects by ${person.name}`,
 };
 
-const research: Research = {
+const research = {
   path: "/research",
   label: "Research & Publications",
   title: "Research & Publications",
   description: `Publications, preprints, and talks by ${person.name}`,
 };
 
-const resume: Resume = {
+const resume = {
   path: "/resume",
   label: "Resume",
   title: "Resume",
   description: `Resume of ${person.name}`,
 };
 
-const contact: Contact = {
+const contact = {
   path: "/contact",
   label: "Contact",
   title: "Contact",
