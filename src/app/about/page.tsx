@@ -88,7 +88,8 @@ export default function About() {
             horizontal="center"
           >
             {/* ✅ Use Avatar with fixed size to avoid layout-based scaling */}
-            <Avatar src={person.avatar} alt={person.name} size="xl" />
+            {/* <Avatar src={person.avatar} alt={person.name} size="xl" /> */}
+            <Avatar src={person.avatar} size="xl" />
             <Row gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
