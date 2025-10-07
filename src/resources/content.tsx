@@ -6,11 +6,9 @@ import {
   Person,
   Social,
   Work,
-  Research,
   Resume,
   Contact,
 } from "@/types";
-
 /**
  * IMPORTANT:
  * - Files under /public are available at the site root.
