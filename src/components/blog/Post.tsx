@@ -18,8 +18,6 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
     <Card
       fillWidth
       href={href}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
       transition="micro-medium"
       direction={direction}
       border="transparent"
@@ -36,7 +34,7 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
           border="neutral-alpha-weak"
           cursor="interactive"
           radius="l"
-          src={post.metadata.image} // e.g. "/blogs/blog1.jpg"
+          src={post.metadata.image}
           alt={"Thumbnail of " + post.metadata.title}
           aspectRatio="16 / 9"
         />
@@ -46,8 +44,6 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
         <Column maxWidth={28} paddingY="24" paddingX="l" gap="20" vertical="center">
           <Row gap="24" vertical="center">
             <Row vertical="center" gap="16">
-              {/* ✅ Fixed-size avatar so it never blows up */}
-              {/* <Avatar src={person.avatar} alt={person.name} size="s" /> */}
               <Avatar src={person.avatar} size="s" />
               <Text variant="label-default-s">{person.name}</Text>
             </Row>
