@@ -7,7 +7,7 @@ export default function ContactPage() {
     <Column maxWidth="s" gap="l" paddingY="16">
       <Heading variant="display-strong-s">Contact</Heading>
       <Text>Email: <a href={`mailto:${"vphan@uic.edu"}`}>vphan@uic.edu</a></Text>
-      <Text>Mobile: (312)-459-8769</Text>
+      <Text>Mobile: (312)-478-2342</Text>
     </Column>
   );
 }
