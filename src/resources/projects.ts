@@ -21,4 +21,14 @@ export const projects: Project[] = [
     demo: "https://github.com/varunpshrivathsa?tab=repositories",
     order: 1,
   },
+  {
+    title: "TurboFanRUL: Remaining Useful Life Prediction System",
+    description:
+      "• Developed turbofan engine RUL prediction pipeline using Linear Regression, Random Forest, and XGBoost.\n• Tuned XGBoost with Optuna, improving RMSE, R², and MAE while automating tracking through MLflow.\n• Deployed FastAPI service on AWS EC2 and built Streamlit dashboard for real-time prediction visualization.",
+    tools: ["Python", "MLFlow", "Docker", "AWS EC2","FastAPI", "Streamlit"],
+    image: "/images/projects/project-03/cover-01.jpg",
+    github: "https://github.com/varunpshrivathsa/TurboFanRUL",
+    demo: "https://turbofanrul-dashboardgit-xzhc7y3livzwpswlalnwjk.streamlit.app/",
+    order: 2,
+  },
 ];
