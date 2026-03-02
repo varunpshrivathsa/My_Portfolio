@@ -16,11 +16,11 @@ import {
 
 const person: Person = {
   firstName: "Varun",
-  lastName: "Phanindra",
-  name: "Varun Phanindra",
-  role: "ML Engineer | Software Development",
+  lastName: "Shrivathsa",
+  name: "Varun Shrivathsa",
+  role: "Robotics Software Engineer | Autonomous Systems",
   avatar: "/images/avatar.jpg", // must exist at /public/images/avatar.jpg
-  email: "vphan@ic.edu",
+  email: "varunpshrivathsa@gmail.com",
   location: "America/Chicago",
   languages: [],
 };
@@ -40,10 +40,9 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/varun-p-shrivathsa/",
+    link: "https://www.linkedin.com/in/varps/",
   },
   { name: "Email", icon: "email", link: `mailto:${person.email}` },
-  { name: "LeetCode", icon: "", link: "https://leetcode.com/u/varunpshrivathsa/" },
 ];
 
 const home={
@@ -52,9 +51,13 @@ const home={
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>I build intelligent software from data to deployment</>,
-  subline: <>I’m Varun, an engineer integrating machine learning with modern software architecture from
-  designing data pipelines, model training and scalable inference systems for real-world deployment.</>,
+  headline: <>I help robots and cars understand the world and explore safely</>,
+  subline: <>I am a Robotics Software Engineer specializing in end-to-end
+  self-driving systems that integrate perception, mapping, planning, and control 
+  into cohesive real-time autonomy stacks. As a Graduate Research Assistant at the 
+  UIC Robotics Laboratory, I design and deploy full autonomy pipelines for physical 
+  mobile robots operating under real-world sensing and compute constraints.
+</>,
 };
 
 const about: About = {
