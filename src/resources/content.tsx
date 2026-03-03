@@ -51,11 +51,11 @@ const home={
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>I build robotic and autonomous systems that perceive the world, 
-  plan intelligently, and navigate safely.</>,
-  subline: <>I'm am Varun,a Robotics Software Engineer specializing in end-to-end
+  headline: <>Building robotic and autonomous systems that perceive, 
+  plan and navigate.</>,
+  subline: <>I'm Varun, a Robotics Software Engineer specializing in end-to-end
   self-driving systems that integrate perception, mapping, planning, and control 
-  into cohesive real-time autonomy stacks.
+  into real-time autonomy stacks.
 </>,
 };
 
