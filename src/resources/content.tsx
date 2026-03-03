@@ -45,18 +45,25 @@ const social: Social = [
   { name: "Email", icon: "email", link: `mailto:${person.email}` },
 ];
 
-const home={
+const home = {
   path: "/",
-  image: "/images/og/home.jpg", // served from /public/images/og/home.jpg
+  image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building robotic and autonomous systems that perceive, 
-  plan and navigate.</>,
-  subline: <>I'm Varun, a Robotics Software Engineer specializing in end-to-end
-  self-driving systems that integrate perception, mapping, planning, and control 
-  into real-time autonomy stacks.
-</>,
+  headline: (
+    <>
+      <div>Veni. Vidi. Vici.</div>
+      <div>SLAM. Perception. Planning.</div>
+    </>
+  ),
+  subline: (
+    <>
+      I'm Varun, a Robotics Software Engineer specializing in end-to-end
+      self-driving systems that integrate perception, mapping, planning, and control
+      into real-time autonomy stacks.
+    </>
+  ),
 };
 
 const about: About = {
