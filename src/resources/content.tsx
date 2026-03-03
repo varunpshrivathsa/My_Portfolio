@@ -83,9 +83,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I am a MSCS Thesis student at University of Illinois-Chicago specializing in Machine
-        Learning, Deep Learning, and Robotics. Experienced in building end-to-end ML pipelines, My
-        Research includes robotic exploration with hands-on work on AgileX LIMO and SCOUT Robots.
+      Robotics Software Engineer specializing in end-to-end autonomous systems, 
+      integrating perception, mapping, planning, and control into real-time autonomy stacks. At UIC Robotics Lab, 
+      I build perception-driven pipelines using RGB-D, LiDAR, and IMU for SLAM and safe navigation. 
+      My research embeds Control Barrier Functions into 
+      3D Gaussian Splatting for provably safe, real-time autonomous exploration on resource-constrained robotic platforms.
       </>
     ),
   },
@@ -94,38 +96,35 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "G19 Studio",
-        timeframe: "May 2025 - Aug 2025",
-        role: "ML Student Intern",
+        company: "University of Illinois - Chicago",
+        timeframe: "Jun 2023 - Jun 2024",
+        role: "Graduate Research Assistant - Robotics",
         achievements: [
           <>
-            Built 'TwinVerse', a human digital twin using real-time Apple Watch data with PyTorch,
-            PPO-RL and XGBoost for stress &amp; fall detection.
+            Conducting research on real-time 3D and 4D Gaussian scene representations for 
+            autonomous campus-scale mapping, navigation, and safety-critical decision making on mobile robots.
           </>,
           <>
-            Deployed with multi-modal signal processing and personalized recovery recommendations as
-            Dockerized FastAPI microservices with Redis caching, improving response latency by 40%.
+            Designing Gaussian-based scene representations as a geometry-grounded interface 
+            between perception, planning, and control, enabling downstream safety reasoning.
           </>,
+          <> Investigating geometry-aware safety mechanisms, including the use of Gaussian representations as inputs to
+          control barrier function (CBF) constraints for real-time control.</>,
         ],
         images: [],
       },
       {
-        company: "Mekhalyn",
-        timeframe: "Jan 2024 - Apr 2024",
-        role: "Software Developer Intern",
+        company: "G19 Studio",
+        timeframe: "Jan 2025 - Jan 2026",
+        role: "ML Engineer Intern - Adv NLP Coursework",
         achievements: [
           <>
-            Developed a recruiter analytics platform with Flask, React, and PostgreSQL, deployed via
-            Kubernetes and CI/CD.
+            Developed Twinverse with researchers and stakeholders for stress & fall detection and personalized exercise planning.
           </>,
           <>
-            Fine-tuned GPT-3.5 using LoRA for resume insights, and ran XGBoost GPU inference on 5M+
-            records, reducing screening time by 38%.
+            Built real-time wearable data ingestion and processing pipelines for Apple Watch and Garmin sensor data.
           </>,
-          <>
-            Implemented role-based authentication and RESTful APIs with unit tests, improving
-            platform security.
-          </>,
+          <>Developed pipeline using TCN, Prophet and XGBoost, achieving 88% stress and 92% fall-detection accuracy</>,
         ],
         images: [],
       },
@@ -135,14 +134,17 @@ const about: About = {
         role: "Research Intern",
         achievements: [
           <>
-            Led a GIS pipeline for STRR Phase-1 impact analysis using Cartosat, Landsat and
-            ALOS-PALSAR to categorize 200m sqm with 92% accuracy.
+            Conducted funded research on large-scale geospatial analysis focusing on geometry-driven modelling of 
+            land-use and environmental changes.
           </>,
           <>
-            Trained 2D CNNs on multispectral bands for automated land-cover segmentation, improving
-            built-up detection.
+            Designed and evaluated supervised spatial classification pipelines over multi-resolution remote sensing data, 
+            emphasising uncertainty handling and interpretability of geometric features.
           </>,
-          <>Obtained Karnataka State Council for Science and Technology (KSCST) research funding.</>,
+          <>Performed multi-temporal, pixel- and region-level change analysis to quantify infrastructure-induced 
+          environmental impact, reinforcing principles of scene representation, spatial consistency, and 
+          long-horizon mapping relevant to autonomous systems.
+</>,
         ],
         images: [],
       },
