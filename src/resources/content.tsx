@@ -271,17 +271,6 @@ const posts = [
     },
   },
   {
-    slug: "knn-mnist-classification",
-    metadata: {
-      title: "KNN Classification: MNIST Digit Recognition",
-      image: "/blogs/blog3.jpg",
-      publishedAt: "2025-02-12",
-      tag: "Machine Learning",
-      externalUrl:
-        "https://medium.com/@varunpshrivathsa/knn-classification-mnist-digit-recognition-c4adf6855f19",
-    },
-  },
-  {
     slug: "hierarchical-clustering-image-segmentation",
     metadata: {
       title: "Agglomerative Hierarchical Clustering in Image Segmentation",
@@ -290,17 +279,6 @@ const posts = [
       tag: "Machine Learning",
       externalUrl:
         "https://medium.com/@varunpshrivathsa/agglomerative-hierarchical-clustering-in-image-segmentation-c682153eb967",
-    },
-  },
-  {
-    slug: "pinecone-semantic-search-movies",
-    metadata: {
-      title: "Pinecone in Action: Semantic Search for Movie Recommendation.",
-      image: "/blogs/blog5.jpg",
-      publishedAt: "2025-05-12",
-      tag: "Generative AI",
-      externalUrl:
-        "https://medium.com/@varunpshrivathsa/pinecone-in-action-semantic-search-for-movie-recommendation-1d597514e3ce",
     },
   },
 ];
