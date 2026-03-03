@@ -53,7 +53,9 @@ const home = {
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: (
     <>
-      <div>Veni. Vidi. Vici.</div>
+      <div style={{ fontSize: "0.8em" }}>
+      Veni. Vidi. Vici.
+    </div>
       <div style={{ whiteSpace: "nowrap" }}>
   SLAM. Perception. Control.
 </div>
