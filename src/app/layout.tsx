@@ -123,6 +123,8 @@ export default async function RootLayout({
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          filter: "blur(6px)",
+          transform: "scale(1.05)", // important to avoid white edges after blur
           zIndex: 0,
         }}
       />
