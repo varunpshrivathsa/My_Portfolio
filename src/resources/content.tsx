@@ -55,7 +55,7 @@ const home = {
     <>
       <div>Veni. Vidi. Vici.</div>
       <div style={{ whiteSpace: "nowrap" }}>
-  SLAM. Perception. Planning.
+  SLAM. Perception. Control.
 </div>
     </>
   ),
