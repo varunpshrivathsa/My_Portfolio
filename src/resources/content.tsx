@@ -54,13 +54,15 @@ const home = {
   headline: (
     <>
       <div>Veni. Vidi. Vici.</div>
-      <div>SLAM. Perception. Planning.</div>
+      <div style={{ whiteSpace: "nowrap" }}>
+  SLAM. Perception. Planning.
+</div>
     </>
   ),
   subline: (
     <>
       I'm Varun, a Robotics Software Engineer specializing in end-to-end
-      self-driving systems that integrate perception, mapping, planning, and control
+      autonomous systems that integrate perception, mapping, planning, and control
       into real-time autonomy stacks.
     </>
   ),
