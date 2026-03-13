@@ -119,11 +119,11 @@ export default async function RootLayout({
           inset: 0,
           pointerEvents: "none",
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/bg.jpg')",
+            "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          filter: "blur(6px)",
+          filter: "blur(8px)",
           transform: "scale(1.05)", // important to avoid white edges after blur
           zIndex: 0,
         }}
