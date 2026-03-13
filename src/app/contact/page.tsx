@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <Column maxWidth="s" gap="l" paddingY="16">
       <Heading variant="display-strong-s">Contact</Heading>
-      <Text>Email: <a href={`mailto:${"vphan@uic.edu"}`}>vphan@uic.edu</a></Text>
+      <Text>Email: <a href={`mailto:${"vphan@uic.edu"}`}>varunpshrivathsa@gmail.com</a></Text>
       <Text>Mobile: (312)-478-2342</Text>
     </Column>
   );

@@ -281,6 +281,17 @@ const posts = [
         "https://medium.com/@varunpshrivathsa/agglomerative-hierarchical-clustering-in-image-segmentation-c682153eb967",
     },
   },
+  {
+    slug: "hierarchical-clustering-image-segmentation",
+    metadata: {
+      title: "How RGB_D Misalignment can cause issues?",
+      image: "/blogs/blog10.jpg",
+      publishedAt: "2026-03-04",
+      tag: "Robotics",
+      externalUrl:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7435060346140299266/?originTrackingId=TnQ4tNe3WtrZmw26LVJmvQ%3D%3D",
+    },
+  },
 ];
 
 const blogPosts = posts;
