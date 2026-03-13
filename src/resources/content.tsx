@@ -284,7 +284,7 @@ const posts = [
   {
     slug: "hierarchical-clustering-image-segmentation",
     metadata: {
-      title: "How RGB_D Misalignment can cause issues?",
+      title: "How RGB-D misalignment can cause issues?",
       image: "/blogs/blog10.jpg",
       publishedAt: "2026-03-04",
       tag: "Robotics",
