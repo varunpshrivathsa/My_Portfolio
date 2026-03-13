@@ -21,4 +21,14 @@ export const projects: Project[] = [
     demo: "https://github.com/varunpshrivathsa?tab=repositories",
     order: 1,
   },
+    {
+    title: "Depth-Color Real-Time Alignment ROS2 Node",
+    description:
+      "Implemented a ROS2 node 'depth_to_color_align_node' that runs during rosbag recording and produces a RGB-Depth aligned Images.",
+    tools: ["ROS2", "PyTorch"],
+    image: "/images/projects/project-02/cover-02.jpg", // swap to your own later
+    github: "https://github.com/varunpshrivathsa/depth_to_color_align_node",
+    // demo: "https://github.com/varunpshrivathsa?tab=repositories",
+    order: 2,
+  },
 ];
