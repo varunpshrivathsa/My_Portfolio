@@ -4,7 +4,7 @@ export const metadata = { title: "Research & Publications" };
 
 export default function ResearchPage() {
   return (
-    <Column maxWidth="m" gap="l" paddingY="16">
+    <Column maxWidth="xl" gap="l" paddingY="16">
 
       <Heading variant="display-strong-s">Research & Publications</Heading>
 
