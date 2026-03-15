@@ -12,7 +12,7 @@ export default function ResearchPage() {
         radius="l"
         border="neutral-alpha-medium"
         gap="24"
-        horizontal="space-between"
+        horizontal="between"
         vertical="start"
         s={{ direction: "column" }}
       >
