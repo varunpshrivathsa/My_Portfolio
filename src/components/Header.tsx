@@ -208,14 +208,6 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-
-              {/* Theme switcher */}
-              {display.themeSwitcher && (
-                <>
-                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
-                </>
-              )}
             </Row>
           </Row>
         </Row>
