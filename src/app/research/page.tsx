@@ -44,27 +44,36 @@ export default function ResearchPage() {
         </Column>
 
         {/* Right side images */}
-        <Row gap="12" s={{ horizontal: "start" }}>
-          <img
-            src="/research/strr-1.png"
-            alt="Research figure 1"
-            style={{
-              width: "120px",
-              height: "80px",
-              objectFit: "cover",
-              borderRadius: "10px",
-            }}
-          />
-          <img
-            src="/research/strr-2.png"
-            alt="Research figure 2"
-            style={{
-              width: "120px",
-              height: "80px",
-              objectFit: "cover",
-              borderRadius: "10px",
-            }}
-          />
+        <Row gap="16" s={{ direction: "column" }}>
+          <a href="/research/strr-1.png" target="_blank" rel="noopener noreferrer">
+            <img
+              src="/research/strr-1.png"
+              alt="Research figure 1"
+              style={{
+                width: "220px",
+                height: "150px",
+                objectFit: "cover",
+                borderRadius: "12px",
+                cursor: "pointer",
+                display: "block",
+              }}
+            />
+          </a>
+
+          <a href="/research/strr-2.png" target="_blank" rel="noopener noreferrer">
+            <img
+              src="/research/strr-2.png"
+              alt="Research figure 2"
+              style={{
+                width: "220px",
+                height: "150px",
+                objectFit: "cover",
+                borderRadius: "12px",
+                cursor: "pointer",
+                display: "block",
+              }}
+            />
+          </a>
         </Row>
       </Row>
     </Column>
