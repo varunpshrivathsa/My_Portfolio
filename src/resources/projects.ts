@@ -31,4 +31,14 @@ export const projects: Project[] = [
     // demo: "https://github.com/varunpshrivathsa?tab=repositories",
     order: 2,
   },
+    {
+    title: "Monocular Visual Odometry (VO) ",
+    description:
+      "Implemented a monocular visual odometry pipeline using ORB feature detection, feature matching, and epipolar geometry to estimate camera trajectory from image sequences on the KITTI dataset.",
+    tools: ["KITTI", "PyTorch", "Computer Vision"],
+    image: "/images/projects/project-03/cover-01.jpg", // swap to your own later
+    github: "https://github.com/varunpshrivathsa/Monocular-Visual-Odometry-ORB",
+    // demo: "https://github.com/varunpshrivathsa?tab=repositories",
+    order: 3,
+  },
 ];
