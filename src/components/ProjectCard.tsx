@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel, Column, Flex, Heading, SmartLink, Text } from "@once-ui-system/core";
+import { Column, Flex, Heading, SmartLink, Text } from "@once-ui-system/core";
 
 interface ProjectCardProps {
   image: string;
@@ -19,22 +19,30 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   tools = [],
   github,
   demo,
-  priority,
 }) => {
   return (
     <Column fillWidth gap="m">
       <div
         style={{
           width: "100%",
-          aspectRatio: "16 / 9",
+          height: "260px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           overflow: "hidden",
           borderRadius: "16px",
+          background: "var(--once-color-neutral-medium)",
         }}
       >
-        <Carousel
-          priority={priority}
-          sizes="33vw"
-          items={[{ slide: image, alt: title }]}
+        <img
+          src={image}
+          alt={title}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
         />
       </div>
 
@@ -107,6 +115,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Text variant="body-default-s">GitHub</Text>
               </SmartLink>
             )}
+
             {demo && (
               <SmartLink
                 href={demo}
