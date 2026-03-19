@@ -39,7 +39,7 @@ export const projects: Project[] = [
     image: "/images/projects/project-04/cover-01.jpg",
     github: "https://github.com/varunpshrivathsa/Stereo-Visual-Odometery",
     order: 2,
-  }
+  },
   {
     title: "LiDAR Point-Cloud Odometry (L-VO)",
     description:
