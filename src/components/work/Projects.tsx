@@ -1,13 +1,11 @@
-import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
 import { projects as allProjects } from "@/resources/projects";
 
 interface ProjectsProps {
-  range?: [number, number?]; // still supported if you want to show a subset
+  range?: [number, number?];
 }
 
 export function Projects({ range }: ProjectsProps) {
-  // Order first by explicit `order`, then by `publishedAt` (newest first)
   const sorted = [...allProjects].sort((a, b) => {
     const orderA = a.order ?? 9999;
     const orderB = b.order ?? 9999;
@@ -18,10 +16,22 @@ export function Projects({ range }: ProjectsProps) {
     return tB - tA;
   });
 
-  const displayed = range ? sorted.slice(range[0] - 1, range[1] ?? sorted.length) : sorted;
+  const displayed = range
+    ? sorted.slice(range[0] - 1, range[1] ?? sorted.length)
+    : sorted;
 
   return (
-    <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+        gap: "32px",
+        width: "100%",
+        marginBottom: "40px",
+        paddingLeft: "24px",
+        paddingRight: "24px",
+      }}
+    >
       {displayed.map((p, index) => (
         <ProjectCard
           key={p.title}
@@ -34,6 +44,6 @@ export function Projects({ range }: ProjectsProps) {
           demo={p.demo}
         />
       ))}
-    </Column>
+    </div>
   );
 }

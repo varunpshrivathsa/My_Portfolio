@@ -26,7 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Image */}
       <Carousel
         priority={priority}
-        sizes="(max-width: 960px) 100vw, 960px"
+        sizes="(max-width: 1200px) 33vw, 33vw"
         items={[{ slide: image, alt: title }]}
       />
 
