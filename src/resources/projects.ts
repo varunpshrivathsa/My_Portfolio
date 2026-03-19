@@ -11,16 +11,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    title: "V-SLAM: Visual-LiDAR SLAM with Map Priors",
-    description:
-      "Developed a real-time SLAM pipeline with visual features, LiDAR scans, and GNSS/IMU fusion for localization and dynamic mapping.",
-    tools: ["PyTorch", "CUDA", "KITTI", "ResNet18"],
-    image: "/images/projects/project-01/cover-01.jpg", // swap to your own later
-    github: "https://github.com/varunpshrivathsa?tab=repositories",
-    demo: "https://github.com/varunpshrivathsa?tab=repositories",
-    order: 1,
-  },
     {
     title: "Depth-Color Real-Time Alignment ROS2 Node",
     description:
@@ -39,7 +29,7 @@ export const projects: Project[] = [
     image: "/images/projects/project-03/cover-01.jpg", // swap to your own later
     github: "https://github.com/varunpshrivathsa/Monocular-Visual-Odometry-ORB",
     // demo: "https://github.com/varunpshrivathsa?tab=repositories",
-    order: 3,
+    order: 1,
   },
   {
     title: "Stereo Visual Odometry (S-VO)",
@@ -49,5 +39,14 @@ export const projects: Project[] = [
     image: "/images/projects/project-04/cover-01.jpg",
     github: "https://github.com/varunpshrivathsa/Stereo-Visual-Odometery",
     order: 2,
+  }
+  {
+    title: "LiDAR Point-Cloud Odometry (L-VO)",
+    description:
+      "Developed a LiDAR odometry pipeline to estimate ego-motion from sequential point clouds on the KITTI dataset. Implemented point cloud preprocessing and voxel downsampling, followed by point-to-plane ICP with outlier handling for robust frame-to-frame registration and trajectory estimation.",
+    tools: ["KITTI", "LiDAR", "Computer Vision", "Open3D"],
+    image: "/images/projects/project-05/cover-01.jpg",
+    github: "https://github.com/varunpshrivathsa/LiDAR-Odometry",
+    order: 3,
   }
 ];
