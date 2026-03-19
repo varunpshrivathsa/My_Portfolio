@@ -29,7 +29,7 @@ export const projects: Project[] = [
     image: "/images/projects/project-02/cover-02.jpg", // swap to your own later
     github: "https://github.com/varunpshrivathsa/depth_to_color_align_node",
     // demo: "https://github.com/varunpshrivathsa?tab=repositories",
-    order: 2,
+    order: 4,
   },
     {
     title: "Monocular Visual Odometry (VO) ",
@@ -41,4 +41,13 @@ export const projects: Project[] = [
     // demo: "https://github.com/varunpshrivathsa?tab=repositories",
     order: 3,
   },
+  {
+    title: "Stereo Visual Odometry (S-VO)",
+    description:
+      "Developed a stereo visual odometry pipeline to estimate camera trajectory from sequential image pairs on the KITTI dataset. Implemented ORB feature detection and descriptor matching across stereo and temporal frames, followed by outlier rejection using RANSAC. Computed relative motion using epipolar geometry and refined pose estimation with Perspective-n-Point (PnP) leveraging triangulated 3D landmarks. Integrated stereo depth estimation, feature tracking, and pose chaining to produce a consistent trajectory. Evaluated performance against ground truth trajectories and analyzed drift, scale consistency, and robustness under varying motion and scene conditions.",
+    tools: ["KITTI", "OpenCV", "NumPy", "Computer Vision", "PyTorch"],
+    image: "/images/projects/project-04/cover-01.jpg",
+    github: "https://github.com/varunpshrivathsa/Stereo-Visual-Odometery",
+    order: 2,
+  }
 ];
