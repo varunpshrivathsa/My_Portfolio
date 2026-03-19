@@ -45,6 +45,7 @@ export function Projects({ range, layout = "list" }: ProjectsProps) {
             tools={p.tools}
             github={p.github}
             demo={p.demo}
+            uniformImage={true}
           />
         ))}
       </div>
@@ -63,6 +64,7 @@ export function Projects({ range, layout = "list" }: ProjectsProps) {
           tools={p.tools}
           github={p.github}
           demo={p.demo}
+          uniformImage={false}
         />
       ))}
     </Column>

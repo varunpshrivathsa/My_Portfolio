@@ -10,6 +10,7 @@ interface ProjectCardProps {
   github?: string;
   demo?: string;
   priority?: boolean;
+  uniformImage?: boolean;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,13 +20,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   tools = [],
   github,
   demo,
+  uniformImage = false,
 }) => {
   return (
     <Column fillWidth gap="m">
       <div
         style={{
           width: "100%",
-          height: "260px",
+          height: uniformImage ? "260px" : "auto",
+          minHeight: uniformImage ? "260px" : undefined,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -39,9 +42,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           alt={title}
           style={{
             width: "100%",
-            height: "100%",
+            height: uniformImage ? "100%" : "auto",
+            maxHeight: uniformImage ? "100%" : "none",
             objectFit: "contain",
             display: "block",
+            borderRadius: "16px",
           }}
         />
       </div>
@@ -53,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             wrap="balance"
             variant="heading-strong-xl"
             style={{
-              minHeight: "72px",
+              minHeight: uniformImage ? "72px" : undefined,
               display: "flex",
               alignItems: "flex-start",
             }}
@@ -68,7 +73,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             variant="body-default-s"
             onBackground="neutral-weak"
             style={{
-              minHeight: "96px",
+              minHeight: uniformImage ? "96px" : undefined,
             }}
           >
             {description}
