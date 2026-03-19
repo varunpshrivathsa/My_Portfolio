@@ -8,7 +8,7 @@ interface ProjectCardProps {
   description: string;
   tools: string[];
   github?: string;
-  demo?: string;     // deployment link
+  demo?: string;
   priority?: boolean;
 }
 
@@ -23,30 +23,50 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
-      {/* Image */}
-      <Carousel
-        priority={priority}
-        sizes="(max-width: 1200px) 33vw, 33vw"
-        items={[{ slide: image, alt: title }]}
-      />
+      <div
+        style={{
+          width: "100%",
+          aspectRatio: "16 / 9",
+          overflow: "hidden",
+          borderRadius: "16px",
+        }}
+      >
+        <Carousel
+          priority={priority}
+          sizes="33vw"
+          items={[{ slide: image, alt: title }]}
+        />
+      </div>
 
-      {/* Body: title → desc → tools → buttons */}
       <Column fillWidth paddingX="s" paddingTop="12" paddingBottom="24" gap="16">
-        {/* Title */}
         {title && (
-          <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+          <Heading
+            as="h2"
+            wrap="balance"
+            variant="heading-strong-xl"
+            style={{
+              minHeight: "72px",
+              display: "flex",
+              alignItems: "flex-start",
+            }}
+          >
             {title}
           </Heading>
         )}
 
-        {/* Description */}
         {description?.trim() && (
-          <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+          <Text
+            wrap="balance"
+            variant="body-default-s"
+            onBackground="neutral-weak"
+            style={{
+              minHeight: "96px",
+            }}
+          >
             {description}
           </Text>
         )}
 
-        {/* Tools */}
         {tools.length > 0 && (
           <Flex gap="8" wrap>
             {tools.map((tool) => (
@@ -67,7 +87,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           </Flex>
         )}
 
-        {/* Buttons */}
         {(github || demo) && (
           <Flex gap="12" wrap>
             {github && (
