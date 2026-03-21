@@ -5,9 +5,14 @@ import { projects as allProjects } from "@/resources/projects";
 interface ProjectsProps {
   range?: [number, number?];
   layout?: "list" | "grid";
+  category?: string;
 }
 
-export function Projects({ range, layout = "list" }: ProjectsProps) {
+export function Projects({
+  range,
+  layout = "list",
+  category = "All",
+}: ProjectsProps) {
   const sorted = [...allProjects].sort((a, b) => {
     const orderA = a.order ?? 9999;
     const orderB = b.order ?? 9999;
@@ -18,9 +23,15 @@ export function Projects({ range, layout = "list" }: ProjectsProps) {
     return tB - tA;
   });
 
+  let filtered = sorted;
+
+  if (category && category !== "All") {
+    filtered = sorted.filter((p) => p.category === category);
+  }
+
   const displayed = range
-    ? sorted.slice(range[0] - 1, range[1] ?? sorted.length)
-    : sorted;
+    ? filtered.slice(range[0] - 1, range[1] ?? filtered.length)
+    : filtered;
 
   if (layout === "grid") {
     return (
