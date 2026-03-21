@@ -11,12 +11,12 @@ export function WorkPageContent() {
 
   return (
     <>
-      <Flex
-        justifyContent="center"
+        <Flex
         gap="12"
         wrap
         marginBottom="32"
-      >
+        style={{ justifyContent: "center" }}
+        >
         {categories.map((cat) => {
           const active = category === cat;
 
