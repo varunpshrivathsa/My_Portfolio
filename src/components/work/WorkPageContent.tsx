@@ -4,19 +4,19 @@ import { useState } from "react";
 import { Flex, Text } from "@once-ui-system/core";
 import { Projects } from "@/components/work/Projects";
 
-const categories = ["All", "Perception", "Robotics Systems"];
+const categories = ["Perception", "Robotics Systems"];
 
 export function WorkPageContent() {
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("Perception");
 
   return (
     <>
-        <Flex
+      <Flex
         gap="12"
         wrap
         marginBottom="32"
         style={{ justifyContent: "center" }}
-        >
+      >
         {categories.map((cat) => {
           const active = category === cat;
 
