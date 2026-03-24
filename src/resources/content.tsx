@@ -97,7 +97,7 @@ const about: About = {
     experiences: [
       {
         company: "University of Illinois - Chicago",
-        timeframe: "Jun 2023 - Jun 2024",
+        timeframe: "Feb 2026 - Present",
         role: "Graduate Research Assistant - Robotics",
         achievements: [
           <>
