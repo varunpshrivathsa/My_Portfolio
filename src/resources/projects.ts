@@ -30,7 +30,7 @@ export const projects: Project[] = [
     tools: ["KITTI", "PyTorch", "Computer Vision"],
     image: "/images/projects/project-03/cover-01.jpg",
     github: "https://github.com/varunpshrivathsa/Monocular-Visual-Odometry-ORB",
-    order: 1,
+    order: 3,
     category: "Perception",
   },
   {
@@ -44,13 +44,13 @@ export const projects: Project[] = [
     category: "Perception",
   },
   {
-    title: "LiDAR Point-Cloud Odometry (L-VO)",
+    title: "LiDAR Odometry (L-VO)",
     description:
       "Developed a LiDAR odometry pipeline to estimate ego-motion from sequential point clouds on the KITTI dataset. Implemented point cloud preprocessing and voxel downsampling, followed by point-to-plane ICP with outlier handling for robust frame-to-frame registration and trajectory estimation.",
     tools: ["KITTI", "LiDAR", "Computer Vision", "Open3D"],
     image: "/images/projects/project-05/cover-01.jpg",
     github: "https://github.com/varunpshrivathsa/LiDAR-Odometry",
-    order: 3,
+    order: 1,
     category: "Perception",
   }
 ];
