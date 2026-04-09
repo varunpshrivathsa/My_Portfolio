@@ -51,21 +51,12 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: (
-    <>
-      <div style={{ fontSize: "0.8em" }}>
-      Veni. Vidi. Vici.
-    </div>
-      <div style={{ whiteSpace: "nowrap" }}>
-  SLAM. Perception. Control.
-</div>
-    </>
-  ),
+  headline: <>Varun Shrivathsa</>,
   subline: (
     <>
-      I'm Varun, a Robotics Software Engineer specializing in end-to-end
-      autonomous systems that integrate perception, mapping, planning, and control
-      into real-time autonomy stacks.
+      I'm Varun, a Robotics Software Engineer
+      <br />
+      specializing in end-to-end autonomous systems.
     </>
   ),
 };
@@ -282,7 +273,7 @@ const posts = [
     },
   },
   {
-    slug: "hierarchical-clustering-image-segmentation",
+    slug: "rgbd-misalignment-issues",
     metadata: {
       title: "How RGB-D misalignment can cause issues?",
       image: "/blogs/blog10.jpg",

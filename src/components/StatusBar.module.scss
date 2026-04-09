@@ -1,0 +1,72 @@
+@use "./breakpoints.scss" as breakpoints;
+
+// ── Keyframes ─────────────────────────────────────────────────────────────────
+
+@keyframes blink {
+    0%, 49% { background-color: #22c55e; box-shadow: 0 0 4px 1px rgba(34, 197, 94, 0.6); }
+    50%, 100% { background-color: var(--neutral-alpha-medium); box-shadow: none; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+// ── Status bar ────────────────────────────────────────────────────────────────
+
+.statusBar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    width: 1px;
+    height: 1.1rem;
+    background-color: var(--neutral-alpha-medium);
+    flex-shrink: 0;
+}
+
+.chip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1.1rem;
+    border: 1px solid var(--neutral-alpha-medium);
+    border-radius: var(--radius-m);
+    background: var(--neutral-alpha-weak);
+    font-family: var(--font-code);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: var(--neutral-on-background-medium);
+    opacity: 0;
+    animation: fadeInUp 0.45s ease forwards;
+
+    &:nth-child(1)  { animation-delay: 0.7s; }
+    &:nth-child(3)  { animation-delay: 1.0s; }
+    &:nth-child(5)  { animation-delay: 1.3s; }
+    &:nth-child(7)  { animation-delay: 1.6s; }
+    &:nth-child(9)  { animation-delay: 1.9s; }
+    &:nth-child(11) { animation-delay: 2.2s; }
+}
+
+.dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: #22c55e;
+    flex-shrink: 0;
+    animation: blink 2s step-start infinite;
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+
+@media (max-width: breakpoints.$s) {
+    .chip {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
+    }
+}

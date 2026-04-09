@@ -8,8 +8,7 @@ export type Project = {
   demo?: string;
   order?: number;
   publishedAt?: string;
-
-  category: string; // ✅ ADD THIS
+  category: string;
 };
 
 export const projects: Project[] = [
