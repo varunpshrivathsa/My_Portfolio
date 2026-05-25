@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Flex, Text } from "@once-ui-system/core";
 import { Projects } from "@/components/work/Projects";
 
-const categories = ["Perception", "Robotics Systems","SLAM"];
+const categories = ["Perception", "Robotics Systems", "SLAM", "Simulation", "Control"];
 
 export function WorkPageContent() {
   const [category, setCategory] = useState("Perception");
