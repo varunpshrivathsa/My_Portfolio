@@ -51,5 +51,21 @@ export const projects: Project[] = [
     github: "https://github.com/varunpshrivathsa/LiDAR-Odometry",
     order: 1,
     category: "Perception",
-  }
+  },
+  {
+    title: "Simulation Project",
+    description: "Description coming soon.",
+    tools: [],
+    image: "/images/projects/project-01/cover-01.jpg",
+    order: 5,
+    category: "Simulation",
+  },
+  {
+    title: "Control Project",
+    description: "Description coming soon.",
+    tools: [],
+    image: "/images/projects/project-01/cover-01.jpg",
+    order: 6,
+    category: "Control",
+  },
 ];
